@@ -1,7 +1,6 @@
 # Market Risk / Froth Dashboard
 
-A manual-entry version of the PiranhaProfits-style dashboard, restructured to
-fix the issues a straight "X of 10 indicators triggered" checklist has:
+A manual-entry dashboard that has a collection of different checklist ranging from Macro Fundamentals, Valuation & Positioning, Technical Trend and Qualitative Judgment (subjective) to give an overall market sentiment based on latest data.
 
 - **Weighted, not counted.** Each indicator has a weight; a credit-spread
   inversion counts for more than a sentiment survey blip.
