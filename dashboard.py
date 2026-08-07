@@ -8,7 +8,6 @@ a single weighted composite score, tracked over time.
 USAGE
 -----
     python dashboard.py            # interactive form, prompts for each indicator
-    python dashboard.py --demo     # runs with example values, no typing required
     python dashboard.py --history  # just show the score history chart/table, no new entry
 
 Each run is saved to history.json (in this folder) with a timestamp, so
@@ -30,31 +29,6 @@ import data_sources
 HISTORY_FILE = Path(__file__).parent / "history.json"
 CHART_FILE = Path(__file__).parent / "dashboard_output.png"
 
-# Example values for --demo mode, keyed by indicator key.
-DEMO_VALUES = {
-    "yield_curve_10y_3m": 0.98,
-    "sahm_rule": 0.2,
-    "hy_oas_stress": 281,
-    "ism_pmi": 55.6,
-    "lei_mom": -0.2,
-    "payrolls_vs_consensus": -63,
-    "shiller_cape": 42.0,
-    "forward_pe": 19.6,
-    "rule_of_20": 29.6,
-    "aaii_bull_bear_spread": -11,
-    "naaim_exposure": 79.7,
-    "credit_spread_percentile": 12,
-    "ipo_deal_growth_yoy": 88,
-    "price_vs_200sma": 1.6,
-    "price_vs_50sma": 1.8,
-    "sma50_vs_sma150_slope": -0.1,
-    "labor_market_softness_feel": 3,
-    "retail_mania_vibe": 3,
-    "narrative_crowding": 4,
-    "geopolitical_tail_risk": 2,
-    "credit_conditions_narrative": 2,
-}
-
 def prompt_value(ind) -> float:
     unit = f" [{ind.unit}]" if ind.unit else ""
     scale_hint = " (enter 1-5)" if ind.subjective else ""
@@ -68,10 +42,6 @@ def prompt_value(ind) -> float:
 
 
 def collect_values(demo: bool, auto: bool) -> dict[str, float]:
-    if demo:
-        print("Running in --demo mode with example values.\n")
-        return dict(DEMO_VALUES)
-
     print("=" * 60)
     title = "MARKET RISK / FROTH DASHBOARD" + ("  (auto-fetch on)" if auto else "  — manual entry")
     print(title)
