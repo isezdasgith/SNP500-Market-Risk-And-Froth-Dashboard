@@ -29,12 +29,24 @@ import data_sources
 HISTORY_FILE = Path(__file__).parent / "history.json"
 CHART_FILE = Path(__file__).parent / "dashboard_output.png"
 
+def _hyperlink(text: str, url: str) -> str:
+    """OSC 8 terminal hyperlink — Ctrl+Click (or Cmd+Click on Mac) opens it in
+    modern terminals (Windows Terminal, VS Code's integrated terminal, iTerm2).
+    Older terminals that don't understand OSC 8 just print the plain text and
+    silently ignore the escape codes, so this degrades safely either way."""
+    return f"\033]8;;{url}\033\\{text}\033]8;;\033\\"
+
+
 def prompt_value(ind) -> float:
     unit = f" [{ind.unit}]" if ind.unit else ""
     scale_hint = " (enter 1-5)" if ind.subjective else ""
     note = f"\n    note: {ind.note}" if ind.note else ""
+    sources = ""
+    if ind.source_links:
+        lines = "\n".join(f"    source ({label}): {_hyperlink(url, url)}" for label, url in ind.source_links)
+        sources = f"\n{lines}"
     while True:
-        raw = input(f"{ind.label}{unit}{scale_hint}{note}\n> ").strip()
+        raw = input(f"{ind.label}{unit}{scale_hint}{note}{sources}\n> ").strip()
         try:
             return float(raw)
         except ValueError:
