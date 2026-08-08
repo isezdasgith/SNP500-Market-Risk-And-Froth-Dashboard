@@ -1,5 +1,9 @@
 # Market Risk / Froth Dashboard
 
+Example Output from Dashboard
+<img width="748" height="577" alt="image" src="https://github.com/user-attachments/assets/a6b4a4c7-5a81-495a-982f-3718bd01365d" />
+![Uploading image.png…]()
+
 A manual-entry dashboard that has a collection of different checklist ranging from Macro Fundamentals, Valuation & Positioning, Technical Trend and Qualitative Judgment (subjective) to give an overall market sentiment based on latest data.
 
 - **Weighted, not counted.** Each indicator has a weight; a credit-spread
