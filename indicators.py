@@ -47,7 +47,7 @@ class Indicator:
     subjective: bool = False       # True for qualitative 1-5 style inputs
     note: str = ""             # short reminder of what to look up / how to judge it
     fetch_key: Optional[str] = None  # if set, dashboard.py --auto will try data_sources.FETCHERS[fetch_key]
-    source_url: Optional[str] = None  # if set, dashboard.py prints a clickable link to look this value up
+    source_links: Optional[list] = None  # list of (label, url) tuples — dashboard.py prints each as a clickable link
 
     def score(self, value: float) -> float:
         """Map a raw value to a 0-100 risk/froth score for this indicator.
@@ -132,7 +132,7 @@ INDICATORS: list[Indicator] = [
         low_risk_value=55,
         high_risk_value=45,
         note="Below 50 = contraction.",
-        source_url="https://tradingeconomics.com/united-states/manufacturing-pmi",
+        source_links=[("ISM PMI", "https://tradingeconomics.com/united-states/manufacturing-pmi")],
     ),
     Indicator(
         key="lei_mom",
@@ -143,7 +143,7 @@ INDICATORS: list[Indicator] = [
         low_risk_value=0.2,
         high_risk_value=-1.0,
         unit="%",
-        source_url="https://www.conference-board.org/topics/us-leading-indicators",
+        source_links=[("Conference Board LEI", "https://www.conference-board.org/topics/us-leading-indicators")],
     ),
     Indicator(
         key="payrolls_vs_consensus",
@@ -154,7 +154,7 @@ INDICATORS: list[Indicator] = [
         low_risk_value=20,
         high_risk_value=-100,
         unit="k, actual minus consensus",
-        source_url="https://tradingeconomics.com/united-states/non-farm-payrolls",
+        source_links=[("Nonfarm payrolls", "https://tradingeconomics.com/united-states/non-farm-payrolls")],
     ),
 
     # ---------------- Valuation & Positioning (quant) ----------------
@@ -168,7 +168,7 @@ INDICATORS: list[Indicator] = [
         high_risk_value=40,
         note="Long-run median is ~17x. This predicts long-run returns, not recession timing.",
         fetch_key="shiller_cape",
-        source_url="https://www.multpl.com/shiller-pe",
+        source_links=[("Shiller CAPE", "https://www.multpl.com/shiller-pe")],
     ),
     Indicator(
         key="forward_pe",
@@ -178,7 +178,7 @@ INDICATORS: list[Indicator] = [
         direction="high_is_risk",
         low_risk_value=16,
         high_risk_value=23,
-        source_url="https://www.wsj.com/market-data/stocks/peyields",
+        source_links=[("S&P 500 forward P/E", "https://www.wsj.com/market-data/stocks/peyields")],
     ),
     Indicator(
         key="rule_of_20",
@@ -201,7 +201,7 @@ INDICATORS: list[Indicator] = [
         high_risk_value=35,
         unit="pp",
         note="Historical average bull-bear spread is roughly +6 to +8pp.",
-        source_url="https://www.aaii.com/sentimentsurvey",
+        source_links=[("AAII Sentiment Survey", "https://www.aaii.com/sentimentsurvey")],
     ),
     Indicator(
         key="naaim_exposure",
@@ -211,7 +211,7 @@ INDICATORS: list[Indicator] = [
         direction="high_is_risk",
         low_risk_value=60,
         high_risk_value=100,
-        source_url="https://ycharts.com/indicators/naaim_number",
+        source_links=[("NAAIM Exposure Index", "https://ycharts.com/indicators/naaim_number")],
     ),
     Indicator(
         key="credit_spread_percentile",
@@ -225,7 +225,7 @@ INDICATORS: list[Indicator] = [
         note="A separate lens from hy_oas_stress above: how RICH/complacent credit looks, not whether it's stressed.",
         fetch_key="credit_spread_percentile",
     ),
-
+    
     # ---------------- Technical Trend (quant) ----------------
     Indicator(
         key="price_vs_200sma",
