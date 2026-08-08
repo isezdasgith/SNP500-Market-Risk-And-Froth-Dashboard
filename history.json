@@ -358,5 +358,349 @@
         "subjective": true
       }
     }
+  },
+  {
+    "timestamp": "2026-08-08T07:00:01.969484+00:00",
+    "composite_score": 36.6,
+    "category_scores": {
+      "Macro Fundamentals": 24.0,
+      "Valuation & Positioning": 71.7,
+      "Technical Trend": 0.0,
+      "Qualitative Judgment": 51.4
+    },
+    "indicator_scores": {
+      "yield_curve_10y_3m": {
+        "label": "10Y-3M Treasury spread",
+        "category": "Macro Fundamentals",
+        "value": 0.78,
+        "score": 28.8,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "sahm_rule": {
+        "label": "Sahm Rule indicator",
+        "category": "Macro Fundamentals",
+        "value": -0.03,
+        "score": 0.0,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "hy_oas_stress": {
+        "label": "High-yield credit spread (stress check)",
+        "category": "Macro Fundamentals",
+        "value": 271.0,
+        "score": 0.0,
+        "weight": 0.9,
+        "subjective": false
+      },
+      "ism_pmi": {
+        "label": "ISM Manufacturing PMI",
+        "category": "Macro Fundamentals",
+        "value": 53.9,
+        "score": 11.0,
+        "weight": 0.8,
+        "subjective": false
+      },
+      "lei_mom": {
+        "label": "Conference Board LEI, m/m change",
+        "category": "Macro Fundamentals",
+        "value": -0.2,
+        "score": 33.3,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "payrolls_vs_consensus": {
+        "label": "Latest nonfarm payrolls vs consensus",
+        "category": "Macro Fundamentals",
+        "value": -103.0,
+        "score": 100.0,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "shiller_cape": {
+        "label": "Shiller CAPE ratio",
+        "category": "Valuation & Positioning",
+        "value": 42.39,
+        "score": 100.0,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "forward_pe": {
+        "label": "S&P 500 forward P/E",
+        "category": "Valuation & Positioning",
+        "value": 21.31,
+        "score": 75.9,
+        "weight": 0.8,
+        "subjective": false
+      },
+      "rule_of_20": {
+        "label": "Rule of 20 (trailing P/E + CPI y/y)",
+        "category": "Valuation & Positioning",
+        "value": 33.61,
+        "score": 100.0,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "aaii_bull_bear_spread": {
+        "label": "AAII bulls minus bears",
+        "category": "Valuation & Positioning",
+        "value": -1.0,
+        "score": 0.0,
+        "weight": 0.5,
+        "subjective": false
+      },
+      "naaim_exposure": {
+        "label": "NAAIM manager equity exposure",
+        "category": "Valuation & Positioning",
+        "value": 79.7,
+        "score": 49.3,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "credit_spread_percentile": {
+        "label": "HY credit spread percentile vs 10yr history",
+        "category": "Valuation & Positioning",
+        "value": 10.3,
+        "score": 84.9,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "price_vs_200sma": {
+        "label": "Price vs 200-day SMA",
+        "category": "Technical Trend",
+        "value": 10.04,
+        "score": 0.0,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "price_vs_50sma": {
+        "label": "Price vs 50-day SMA",
+        "category": "Technical Trend",
+        "value": 3.51,
+        "score": 0.0,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "sma50_vs_sma150_slope": {
+        "label": "50-day SMA minus 150-day SMA (death-cross proximity)",
+        "category": "Technical Trend",
+        "value": 5.07,
+        "score": 0.0,
+        "weight": 0.9,
+        "subjective": false
+      },
+      "labor_market_softness_feel": {
+        "label": "Labor market softness (your read of recent coverage)",
+        "category": "Qualitative Judgment",
+        "value": 4.0,
+        "score": 75.0,
+        "weight": 1.0,
+        "subjective": true
+      },
+      "retail_mania_vibe": {
+        "label": "Retail/meme mania vibe",
+        "category": "Qualitative Judgment",
+        "value": 2.0,
+        "score": 25.0,
+        "weight": 0.8,
+        "subjective": true
+      },
+      "narrative_crowding": {
+        "label": "Single-theme narrative crowding (e.g. one dominant AI/macro story)",
+        "category": "Qualitative Judgment",
+        "value": 3.0,
+        "score": 50.0,
+        "weight": 0.7,
+        "subjective": true
+      },
+      "geopolitical_tail_risk": {
+        "label": "Geopolitical/tail-risk overhang",
+        "category": "Qualitative Judgment",
+        "value": 4.0,
+        "score": 75.0,
+        "weight": 0.6,
+        "subjective": true
+      },
+      "credit_conditions_narrative": {
+        "label": "Credit-tightening narrative in the news (bank surveys, lending standards)",
+        "category": "Qualitative Judgment",
+        "value": 2.0,
+        "score": 25.0,
+        "weight": 0.6,
+        "subjective": true
+      }
+    }
+  },
+  {
+    "timestamp": "2026-08-08T07:19:35.653611+00:00",
+    "composite_score": 36.6,
+    "category_scores": {
+      "Macro Fundamentals": 24.0,
+      "Valuation & Positioning": 71.7,
+      "Technical Trend": 0.0,
+      "Qualitative Judgment": 51.4
+    },
+    "indicator_scores": {
+      "yield_curve_10y_3m": {
+        "label": "10Y-3M Treasury spread",
+        "category": "Macro Fundamentals",
+        "value": 0.78,
+        "score": 28.8,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "sahm_rule": {
+        "label": "Sahm Rule indicator",
+        "category": "Macro Fundamentals",
+        "value": -0.03,
+        "score": 0.0,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "hy_oas_stress": {
+        "label": "High-yield credit spread (stress check)",
+        "category": "Macro Fundamentals",
+        "value": 271.0,
+        "score": 0.0,
+        "weight": 0.9,
+        "subjective": false
+      },
+      "ism_pmi": {
+        "label": "ISM Manufacturing PMI",
+        "category": "Macro Fundamentals",
+        "value": 53.9,
+        "score": 11.0,
+        "weight": 0.8,
+        "subjective": false
+      },
+      "lei_mom": {
+        "label": "Conference Board LEI, m/m change",
+        "category": "Macro Fundamentals",
+        "value": -0.2,
+        "score": 33.3,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "payrolls_vs_consensus": {
+        "label": "Latest nonfarm payrolls vs consensus",
+        "category": "Macro Fundamentals",
+        "value": -103.0,
+        "score": 100.0,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "shiller_cape": {
+        "label": "Shiller CAPE ratio",
+        "category": "Valuation & Positioning",
+        "value": 42.39,
+        "score": 100.0,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "forward_pe": {
+        "label": "S&P 500 forward P/E",
+        "category": "Valuation & Positioning",
+        "value": 21.31,
+        "score": 75.9,
+        "weight": 0.8,
+        "subjective": false
+      },
+      "rule_of_20": {
+        "label": "Rule of 20 (trailing P/E + CPI y/y)",
+        "category": "Valuation & Positioning",
+        "value": 29.52,
+        "score": 100.0,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "aaii_bull_bear_spread": {
+        "label": "AAII bulls minus bears",
+        "category": "Valuation & Positioning",
+        "value": -1.0,
+        "score": 0.0,
+        "weight": 0.5,
+        "subjective": false
+      },
+      "naaim_exposure": {
+        "label": "NAAIM manager equity exposure",
+        "category": "Valuation & Positioning",
+        "value": 79.7,
+        "score": 49.3,
+        "weight": 0.6,
+        "subjective": false
+      },
+      "credit_spread_percentile": {
+        "label": "HY credit spread percentile vs 10yr history",
+        "category": "Valuation & Positioning",
+        "value": 10.3,
+        "score": 84.9,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "price_vs_200sma": {
+        "label": "Price vs 200-day SMA",
+        "category": "Technical Trend",
+        "value": 10.04,
+        "score": 0.0,
+        "weight": 1.0,
+        "subjective": false
+      },
+      "price_vs_50sma": {
+        "label": "Price vs 50-day SMA",
+        "category": "Technical Trend",
+        "value": 3.51,
+        "score": 0.0,
+        "weight": 0.7,
+        "subjective": false
+      },
+      "sma50_vs_sma150_slope": {
+        "label": "50-day SMA minus 150-day SMA (death-cross proximity)",
+        "category": "Technical Trend",
+        "value": 5.07,
+        "score": 0.0,
+        "weight": 0.9,
+        "subjective": false
+      },
+      "labor_market_softness_feel": {
+        "label": "Labor market softness (your read of recent coverage)",
+        "category": "Qualitative Judgment",
+        "value": 4.0,
+        "score": 75.0,
+        "weight": 1.0,
+        "subjective": true
+      },
+      "retail_mania_vibe": {
+        "label": "Retail/meme mania vibe",
+        "category": "Qualitative Judgment",
+        "value": 2.0,
+        "score": 25.0,
+        "weight": 0.8,
+        "subjective": true
+      },
+      "narrative_crowding": {
+        "label": "Single-theme narrative crowding (e.g. one dominant AI/macro story)",
+        "category": "Qualitative Judgment",
+        "value": 3.0,
+        "score": 50.0,
+        "weight": 0.7,
+        "subjective": true
+      },
+      "geopolitical_tail_risk": {
+        "label": "Geopolitical/tail-risk overhang",
+        "category": "Qualitative Judgment",
+        "value": 4.0,
+        "score": 75.0,
+        "weight": 0.6,
+        "subjective": true
+      },
+      "credit_conditions_narrative": {
+        "label": "Credit-tightening narrative in the news (bank surveys, lending standards)",
+        "category": "Qualitative Judgment",
+        "value": 2.0,
+        "score": 25.0,
+        "weight": 0.6,
+        "subjective": true
+      }
+    }
   }
 ]

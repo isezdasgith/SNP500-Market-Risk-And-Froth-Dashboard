@@ -188,7 +188,6 @@ INDICATORS: list[Indicator] = [
         direction="high_is_risk",
         low_risk_value=16,
         high_risk_value=26,
-        fetch_key="rule_of_20",
         source_links=[("Trailing P/E", "https://www.wsj.com/market-data/stocks/peyields"), ("CPI y/y", "https://www.investing.com/economic-calendar/cpi-733")],
     ),
     Indicator(
@@ -225,7 +224,7 @@ INDICATORS: list[Indicator] = [
         note="A separate lens from hy_oas_stress above: how RICH/complacent credit looks, not whether it's stressed.",
         fetch_key="credit_spread_percentile",
     ),
-    
+
     # ---------------- Technical Trend (quant) ----------------
     Indicator(
         key="price_vs_200sma",
