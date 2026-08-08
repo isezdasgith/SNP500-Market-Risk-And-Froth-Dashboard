@@ -19,7 +19,6 @@ A manual-entry dashboard that has a collection of different checklist ranging fr
 
 ```bash
 pip install -r requirements.txt
-python dashboard.py --demo      # try it with example values, no typing
 python dashboard.py --auto      # auto-fetch what's freely available, prompts for the rest
 python dashboard.py             # fully manual entry
 python dashboard.py --history   # just re-show the latest result + chart
