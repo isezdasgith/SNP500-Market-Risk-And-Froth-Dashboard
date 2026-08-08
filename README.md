@@ -48,8 +48,9 @@ typing that one field yourself.
 
 **Not automatable — no free structured source exists:** ISM PMI,
 Conference Board LEI, payrolls-vs-consensus, forward P/E, AAII
-sentiment, NAAIM exposure, IPO/M&A deal growth. Where to look each up
-by hand:
+sentiment, NAAIM exposure. Where to look each up
+by hand: (LINKS ARE PROVIDED WITHIN EACH PROMPT)
+
 - ISM PMI: ISM website / financial news
 - Conference Board LEI: conference-board.org
 - Forward P/E, AAII sentiment, NAAIM: FactSet/Yardeni research notes, AAII.com, NAAIM.org
